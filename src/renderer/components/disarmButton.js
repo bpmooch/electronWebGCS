@@ -4,38 +4,38 @@ import { faStop } from '@fortawesome/free-solid-svg-icons';
 import { Button } from 'react-bootstrap';
 import { useEffect } from 'react';
 
-const ARMED_REST_ENDPOINT = "http://localhost:8081/armed"
+const ARMED_REST_ENDPOINT = 'http://localhost:8081/armed';
 
 function DisarmDrone() {
-    fetch('http://localhost:8081/disarm', {
-        method: 'GET',
-        headers: {
-          Accept: 'application/json',
-          'Content-Type': 'application/json',
-        },
-      });
+  fetch('http://localhost:8081/disarm', {
+    method: 'GET',
+    headers: {
+      Accept: 'application/json',
+      'Content-Type': 'application/json',
+    },
+  });
 }
 
-
-function DisarmButton() {    
+function DisarmButton() {
   const [armed, setArmed] = useState({});
-  useEffect( () => {
-      
+  useEffect(() => {
     const timer = setInterval(async () => {
-        const res = await fetch(ARMED_REST_ENDPOINT);
-        const newArmed = await res.json();
-        setArmed(newArmed);
-       
+      const res = await fetch(ARMED_REST_ENDPOINT);
+      const newArmed = await res.json();
+      setArmed(newArmed);
     }, 100);
 
     return () => clearInterval(timer);
-},[]);
-    return (
-      
-            <Button variant="dark" hidden={!armed.is_armed}
-                onClick={() => DisarmDrone()}><FontAwesomeIcon icon={faStop} color="white"/></Button>
-     
-    )
+  }, []);
+  return (
+    <Button
+      variant="dark"
+      hidden={!armed.is_armed}
+      onClick={() => DisarmDrone()}
+    >
+      <FontAwesomeIcon icon={faStop} color="white" />
+    </Button>
+  );
 }
 
-export default DisarmButton
+export default DisarmButton;

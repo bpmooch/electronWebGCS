@@ -3,8 +3,6 @@
  *        See https://github.com/webpack-contrib/sass-loader#imports
  */
 body {
-  
-  
   /* height: 100vh; */
   overflow-y: hidden;
   font-family: sans-serif;
@@ -41,7 +39,6 @@ a {
   text-decoration: none;
   height: fit-content;
   width: fit-content;
-  
 }
 
 a:hover {
@@ -50,7 +47,6 @@ a:hover {
 }
 
 .FlightView {
-  
   justify-content: center;
   align-items: center;
 }
@@ -61,8 +57,8 @@ a:hover {
   top: 0;
   left: 0;
   width: 100vw;
-    height: 100vw;
-  }
+  height: 100vw;
+}
 
 #buttons {
   position: absolute;
@@ -82,14 +78,14 @@ a:hover {
   z-index: 1;
 }
 
-.instrument{
+.instrument {
   height: 150px !important;
   width: 150px !important;
 }
 
-#coordinates{
+#coordinates {
   background-color: white;
-  opacity: 0.9 ;
+  opacity: 0.9;
   position: absolute;
   margin: 10px;
   bottom: -0px;
@@ -98,7 +94,7 @@ a:hover {
 }
 
 /* progress bar change radius */
-.progress{
+.progress {
   --bs-progress-border-radius: 0px !important;
   position: absolute;
   top: 65px;
@@ -110,7 +106,7 @@ a:hover {
   --bs-table-bg: #212529 !important;
 }
 
-.drone{
+.drone {
   top: -24px;
   stroke: white;
   stroke-width: 20;
@@ -119,14 +115,13 @@ a:hover {
   height: 48px;
   width: 48px;
   border: none;
-  
 }
 
-.missionMarker{
+.missionMarker {
   background-color: orangered;
   color: white;
   padding: 1px 3px;
-  
+
   font-size: x-small;
   font-weight: bold;
   border-radius: 50%;
